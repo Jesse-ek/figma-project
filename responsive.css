@@ -1,12 +1,3 @@
-/* @media (max-width: 960px) {
-    section {
-        display: flex;
-        flex-direction: column;
-    }
-    
-} */
-
-
 @media screen and (max-width: 600px) {
     header, 
     .navbar{display: flex;

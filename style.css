@@ -27,7 +27,6 @@ body, body{
     background-size: cover;
     background-attachment: fixed;
     overflow: auto;
-    /* transition: 5s; */
 
     animation-name: animate;
     animation-direction: alternate-reverse;
