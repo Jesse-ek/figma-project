@@ -1,4 +1,9 @@
-body,html{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, body{
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -9,14 +14,8 @@ body,html{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* background-image: url(imgs/image1.jpg); */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-size: 100%; */
-    /* overflow: auto;
-    display: flex;
-    flex-direction: column; */
+
+
 
 }
 .container{
@@ -27,9 +26,16 @@ body,html{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* position: relative; */
     overflow: auto;
-    /* overflow-y: visible; */
+    /* transition: 5s; */
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
 
 }
 
@@ -38,7 +44,6 @@ body,html{
     top: 0;
     left: 0;
     padding: 5px 100px;   
-    /* background: green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,13 +73,9 @@ ul {
     color: white;
     font-weight: 500;
     text-decoration: none;
-    /* margin-left: 20px; */
     background: transparent;
     padding: 2px 15px;
     border-radius: 20px;
-    /* height: 60px;
-    overflow-x: auto;
-    white-space: nowrap; */
 
 }
 
@@ -90,13 +91,26 @@ ul {
 }
 
 .content {
+    /* width: 50%; */
     max-width: 650px;
-    margin: 60px 200px;
-    /* margin-top: 150px;
-    padding-left: 200px;
-    margin-left: 0; */
+    margin: 60px;
+
+}
+.paragraph h2{
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
+h2 span{
+    color: 	DeepSkyBlue;
+}
+.paragraph{
+    margin: 60px;
+}
+
+#ptag{
+    padding-top: 20px;
+}
 
 button{
     color: white;
@@ -109,7 +123,7 @@ button{
     cursor: pointer;
     border-radius: 20px;
     background: transparent;
-    
+    margin-top: 30px;
 }
 button:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -118,46 +132,14 @@ button:hover{
 }
 
 
-.social-icons{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    /* margin: 1%; */
-    display: inline-flex;
-    align-items: center;
-    /* margin: 0; */
-
-}
-.social-icons a{
-    color: white;
-    padding: 5px;
-
-}
-.social-icons a:hover{
-    transform: scale(1.2);
-
-}
-
-.socials{
-    display: flex;
-    align-items: center;
-    /* margin: 10px 200px; */
-    height: 20%;
-}
-
-hr{
-    height: 150px;
-    margin-right: 0px;
-    margin: 10px 20px;
-}
 
 footer{
-    margin-top: 50px;
-    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
+    padding: 20px;
+    position: relative;
+    bottom: 0;
 
 }
 
@@ -170,22 +152,48 @@ footer{
 span{
     color: white;
     font-weight: bold;
-    /* font-size: 20px; */
 }
 
-.foot-icon{
+.foot-icons{
     letter-spacing: 30px;
     font-size: 30px;
     position: relative;
+    padding-top: 20px;
 }
 
-.foot-icon a{
+.foot-icons a{
     color: rgba(255, 255, 255, 0.518);
     transition: 0.3s;
-    transition-property: tra;
 
 }
 
-.foot-icon a:hover{
-    transform: scale(1.5);
+.foot-icons a.active{
+    transform: scale(1.2);
+}
+
+@keyframes animate {
+    0%
+    {
+        background-image: url(imgs/diagoona-bg-2.jpg);
+    }
+    20%
+    {
+        background-image: url(imgs/diagoona-bg-1.jpg);
+    }
+    40%
+    {
+        background-image: url(imgs/diagoona-bg-2.jpg);
+    }
+    60%
+    {
+        background-image: url(imgs/diagoona-bg-1.jpg);
+    }
+    80%
+    {
+        background-image: url(imgs/diagoona-bg-2.jpg);
+    }
+    100%
+    {
+        background-image: url(imgs/diagoona-bg-1.jpg);
+    }
 }
